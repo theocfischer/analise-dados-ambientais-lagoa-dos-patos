@@ -1,145 +1,106 @@
-# Estudo de Caso — Análise de Dados Ambientais da Lagoa dos Patos
+# Análise de Dados Ambientais da Lagoa dos Patos
 
-## 1. Sobre o projeto
+Estudo de caso técnico baseado em estágio obrigatório realizado com foco em tratamento, organização e visualização de dados ambientais da Lagoa dos Patos utilizando Python, Jupyter Notebook, pandas e Matplotlib.
 
-Este repositório documenta um estudo de caso técnico baseado na minha experiência de estágio obrigatório, realizado entre agosto e outubro de 2025, com foco em análise de dados ambientais da Lagoa dos Patos.
-
-O estágio teve como objetivo utilizar ferramentas de programação e análise de dados para organizar, tratar e visualizar informações relacionadas à qualidade da água, utilizando dados públicos de instituições como FEPAM e ANA.
-
-Esta versão pública não contém todos os notebooks, gráficos e arquivos originais do estágio. O objetivo deste repositório é registrar a metodologia, as ferramentas utilizadas, os desafios encontrados e os aprendizados obtidos durante o processo.
+> **Status:** documentação técnica reconstruída a partir de registros do estágio, relatório e material de apresentação científica.  
+> Os notebooks, bases tratadas e gráficos originais não estão integralmente disponíveis nesta versão pública.
 
 ---
 
-## 2. Contexto
+## 1. Visão geral
 
-A Lagoa dos Patos é um dos principais sistemas lagunares do Rio Grande do Sul e possui grande importância ambiental, econômica e social.
+Este repositório documenta um projeto de análise de dados ambientais desenvolvido durante estágio obrigatório, com foco na qualidade da água da Lagoa dos Patos, no Rio Grande do Sul.
 
-Durante o estágio, o foco foi estudar parâmetros de qualidade da água a partir de bases públicas, buscando compreender variações ao longo do tempo e possíveis relações entre diferentes indicadores ambientais.
+O trabalho utilizou dados públicos da FEPAM e da ANA/RNQA para investigar parâmetros físico-químicos da água, como pH, oxigênio dissolvido, salinidade, turbidez e transparência.
 
-O projeto teve caráter exploratório, ou seja, não teve a intenção de produzir conclusões definitivas, mas sim organizar dados, gerar visualizações e levantar hipóteses para análises futuras.
+A análise foi realizada em ambiente Jupyter Notebook, utilizando Python e bibliotecas voltadas para manipulação e visualização de dados.
 
 ---
 
-## 3. Objetivos
+## 2. Objetivo do projeto
 
-Os principais objetivos do estágio foram:
+O objetivo principal foi aplicar técnicas de programação e análise de dados para:
 
-- utilizar Python para leitura e tratamento de dados ambientais;
-- trabalhar com bases públicas da FEPAM e da ANA;
-- organizar dados em ambiente Jupyter Notebook;
-- filtrar informações relacionadas à Lagoa dos Patos;
-- analisar parâmetros físico-químicos da água;
-- gerar gráficos e visualizações;
-- calcular médias anuais dos parâmetros analisados;
-- construir matriz de correlação entre variáveis;
-- documentar o processo de análise.
+- coletar e organizar dados públicos ambientais;
+- ler arquivos em formatos CSV e XLS;
+- tratar problemas de encoding e padronização;
+- filtrar estações associadas à Lagoa dos Patos;
+- limpar e estruturar dados de qualidade da água;
+- calcular médias anuais de parâmetros ambientais;
+- criar gráficos de tendência;
+- construir matrizes de correlação;
+- apoiar a elaboração de relatório técnico e banner científico.
+
+---
+
+## 3. Contexto
+
+A Lagoa dos Patos é um sistema lagunar de grande importância ambiental, social e econômica para o Rio Grande do Sul.
+
+Por receber influência de rios, do Lago Guaíba e do Oceano Atlântico, seus parâmetros de qualidade da água podem variar ao longo do tempo devido a fatores como:
+
+- regime de chuvas;
+- entrada de água doce;
+- influência marinha;
+- enchentes;
+- ressuspensão de sedimentos;
+- atividades humanas;
+- sazonalidade.
+
+O projeto teve caráter exploratório, buscando organizar dados públicos e gerar visualizações iniciais que ajudassem a compreender variações nos parâmetros analisados.
 
 ---
 
 ## 4. Fontes de dados
 
-Durante o estágio, foram utilizadas ou investigadas bases públicas relacionadas ao monitoramento da qualidade da água.
+Durante o estágio foram utilizadas ou investigadas bases públicas relacionadas ao monitoramento da qualidade da água.
 
 As principais fontes foram:
 
-- FEPAM — Fundação Estadual de Proteção Ambiental do Rio Grande do Sul;
-- ANA — Agência Nacional de Águas e Saneamento Básico;
-- bases com informações de estações de monitoramento;
-- arquivos em formatos como CSV e XLS;
-- dados de parâmetros ambientais, como pH, oxigênio dissolvido, salinidade, turbidez e transparência.
+- **FEPAM** — Fundação Estadual de Proteção Ambiental do Rio Grande do Sul;
+- **ANA/RNQA** — Agência Nacional de Águas e Saneamento Básico / Rede Nacional de Monitoramento da Qualidade da Água;
+- bases de estações de monitoramento;
+- bases de medições físico-químicas;
+- arquivos CSV e XLS.
 
-Um dos desafios encontrados foi identificar corretamente quais estações de monitoramento estavam associadas à Lagoa dos Patos, especialmente por causa de diferenças entre códigos, coordenadas e classificações das bases.
+Entre os arquivos trabalhados ou mencionados no fluxo do projeto estavam:
+
+- `IQ_OD_2021.csv`;
+- `Rede_Nacional_de_Monitoramento_da_Qualidade_da_Água_(RNQA)_-_Estações_implantadas_por_ano.csv`;
+- `FEPAM_estacoes.csv`;
+- `filtradas_fepam_LP.xls`;
+- `FEPAM_estacoes_Lagoa.csv`;
+- `fepam_lagoa_dos_patos_limpo.csv`.
 
 ---
 
-## 5. Ferramentas utilizadas
+## 5. Ferramentas e tecnologias
 
 As principais ferramentas e bibliotecas utilizadas foram:
 
 - Python;
 - Jupyter Notebook;
+- Anaconda;
 - pandas;
 - NumPy;
 - Matplotlib;
 - Seaborn;
-- Anaconda;
-- arquivos CSV e XLS.
-
-O ambiente Jupyter Notebook foi utilizado por permitir escrever código, testar etapas, visualizar resultados e documentar o raciocínio no mesmo local.
+- leitura de arquivos CSV/XLS;
+- GitHub para documentação do projeto.
 
 ---
 
-## 6. Parâmetros analisados
+## 6. Estrutura planejada do projeto
 
-Os principais parâmetros ambientais analisados foram:
+A estrutura original do projeto foi organizada em pastas para separar dados brutos, dados tratados, notebooks e arquivos de relatório.
 
-### pH
-
-Indica o nível de acidez ou alcalinidade da água. É um parâmetro importante porque alterações muito grandes podem afetar organismos aquáticos e indicar mudanças nas condições ambientais.
-
-### Oxigênio dissolvido
-
-Representa a quantidade de oxigênio disponível na água. É essencial para peixes e outros organismos aquáticos. Baixos níveis de oxigênio dissolvido podem indicar poluição, excesso de matéria orgânica ou condições ambientais desfavoráveis.
-
-### Salinidade
-
-Indica a quantidade de sais dissolvidos na água. Na Lagoa dos Patos, esse parâmetro pode variar devido à influência da água doce dos rios e da entrada de água salgada pelo sul, próxima ao oceano.
-
-### Turbidez
-
-Indica o quanto a água está turva, geralmente por presença de sedimentos, partículas em suspensão ou matéria orgânica. Pode aumentar em períodos de chuva intensa, vento, ressuspensão de sedimentos ou eventos extremos.
-
-### Transparência
-
-Indica a profundidade até onde é possível visualizar através da água. Durante a análise, esse parâmetro foi considerado, mas posteriormente foi deixado de lado em algumas visualizações para facilitar a interpretação dos dados.
-
----
-
-## 7. Etapas realizadas
-
-O processo de análise envolveu as seguintes etapas:
-
-### 7.1 Coleta e inspeção dos dados
-
-Foram baixados arquivos públicos relacionados ao monitoramento da qualidade da água. Em seguida, os dados foram carregados no Jupyter Notebook para inspeção inicial.
-
-Nessa etapa, foram analisadas colunas, formatos, tipos de dados e possíveis problemas de leitura.
-
-### 7.2 Tratamento de problemas de encoding
-
-Alguns arquivos apresentaram problemas de acentuação e caracteres especiais. Para resolver isso, foram testadas alternativas de leitura, incluindo o uso de encoding como `latin1`.
-
-Esse foi um dos primeiros desafios técnicos do projeto.
-
-### 7.3 Filtragem de estações
-
-Uma etapa importante foi tentar identificar estações de monitoramento associadas à Lagoa dos Patos.
-
-Foram analisadas informações como códigos de estação, nomes, coordenadas, recurso hídrico e identificadores como CDHIDRO.
-
-Esse processo foi necessário porque nem todas as bases apresentavam as estações de forma padronizada.
-
-### 7.4 Organização dos parâmetros
-
-Após a filtragem dos dados, os parâmetros ambientais foram organizados para permitir análise temporal e comparação entre variáveis.
-
-Foram trabalhados principalmente:
-
-- pH;
-- oxigênio dissolvido;
-- salinidade;
-- turbidez;
-- transparência.
-
-### 7.5 Cálculo de médias anuais
-
-Foi utilizada a ideia de agrupamento por ano para calcular médias anuais dos parâmetros.
-
-Exemplo conceitual:
-
-```python
-df_med['ano'] = df_med['data'].dt.year
-
-media_anual = df_med.groupby('ano')[
-    ['ph', 'oxigenio_dissolvido', 'salinidade', 'turbidez', 'transparencia']
-].mean()
+```text
+Estagio_LagoaDosPatos/
+│
+├── apresentacao/
+├── dados_brutos/
+├── dados_tratados/
+├── notebooks/
+├── relatorio/
+├── cleanup_project.ipynb
+└── Untitled.ipynb
