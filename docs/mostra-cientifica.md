@@ -1,6 +1,12 @@
 # Mostra Científica — Análise da Qualidade da Água da Lagoa dos Patos
 
-![Banner da Mostra Científica](../assets/banner-mostra-cientifica.png)
+<p align="center">
+  <img src="../assets/banner-mostra-cientifica.png" alt="Banner da Mostra Científica" width="650">
+</p>
+
+<p align="center">
+  <em>Banner apresentado na Mostra Científica, com resultados do estágio sobre análise temporal da qualidade da água da Lagoa dos Patos.</em>
+</p>
 
 Este documento registra a forma como os resultados do estágio foram organizados para apresentação em formato de banner científico.
 
