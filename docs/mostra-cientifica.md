@@ -1,5 +1,7 @@
 # Mostra Científica — Análise da Qualidade da Água da Lagoa dos Patos
 
+![Banner da Mostra Científica](../assets/banner-mostra-cientifica.png)
+
 Este documento registra a forma como os resultados do estágio foram organizados para apresentação em formato de banner científico.
 
 A apresentação teve como foco mostrar, de maneira visual e resumida, como dados públicos e ferramentas computacionais podem ser usados para apoiar o monitoramento ambiental da Lagoa dos Patos.
