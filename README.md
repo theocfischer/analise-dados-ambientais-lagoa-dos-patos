@@ -26,6 +26,12 @@ Estudo de caso técnico baseado em um estágio obrigatório realizado com foco e
 15. [Competências demonstradas](#15-competências-demonstradas)  
 16. [Aviso sobre reprodutibilidade](#16-aviso-sobre-reprodutibilidade)  
 
+## Documentos complementares
+
+- [Mostra Científica](docs/mostra-cientifica.md)
+- [Roteiro de apresentação](docs/roteiro-apresentacao.md)
+- [Perguntas e respostas para banca](docs/perguntas-banca.md)
+
 ---
 
 ## 1. Visão geral
